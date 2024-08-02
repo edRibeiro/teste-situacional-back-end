@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
 use App\Traits\ApiResponser;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 
@@ -56,7 +57,7 @@ class AuthenticateController extends Controller
      *     )
      * )
      */
-    public function store(LoginRequest $request): JsonResponse
+    public function store(Request $request): JsonResponse
     {
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             $user = Auth::user();
@@ -68,7 +69,7 @@ class AuthenticateController extends Controller
                 'token' => $token->plainTextToken
             ]);
         } else {
-            return $this->errorResponse('The provided credentials do not match our records.', Response::HTTP_UNAUTHORIZED);
+            return $this->errorResponse('Unauthorised.', Response::HTTP_UNAUTHORIZED);
         }
     }
 }

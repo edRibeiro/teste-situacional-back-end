@@ -47,4 +47,15 @@ class AuthenticationTest extends TestCase
             'message'
         ]);
     }
+
+    function test_user_is_unauthenticated()
+    {
+        $response = $this->getJson('/api/users');
+
+        // Verifica se a resposta tem status 200
+        $response->assertStatus(401);
+        $response->assertJson([
+            "message" => "Unauthenticated."
+        ]);
+    }
 }
