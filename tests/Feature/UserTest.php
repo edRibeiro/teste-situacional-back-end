@@ -105,6 +105,9 @@ class UserTest extends TestCase
                 'id' => $testUser->id,
                 'name' => $testUser->name,
                 'email' => $testUser->email,
+                'email_verified_at' => $testUser->email_verified_at->toJSON(),
+                'created_at' => $testUser->created_at->toJSON(),
+                'updated_at' => $testUser->updated_at->toJSON()
             ]
         ]);
     }
