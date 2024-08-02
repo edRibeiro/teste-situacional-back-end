@@ -7,9 +7,7 @@
 -   <a href="#boat-sobre-o-projeto">Sobre o projeto</a>
 -   <a href="#hammer-tecnologias">Tecnologias</a>
 -   <a href="#clipboard-pré-requisitos">Pré-requisitos</a>
--   <a href="#rocket-como-rodar-esse-projeto">Como rodar esse projeto</a>
--   <a href="#gear-principais-características-e-funcionalidades">Principais Características e Funcionalidades</a>
-    
+-   <a href="#rocket-como-rodar-esse-projeto">Como rodar esse projeto</a>   
 -   <a href="#bookmark_tabs-licença">Licença</a>
 -   <a href="#wink-autores">Autores</a>
 
